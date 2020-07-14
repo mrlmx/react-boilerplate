@@ -1,0 +1,26 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.1",
+  "description": "A react boilerplate with mobx, typescript and webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrlmx/react-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "mobx",
+    "webpack",
+    "boilerplate"
+  ],
+  "author": "limingxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrlmx/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mrlmx/react-boilerplate#readme"
+}
