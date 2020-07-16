@@ -1,0 +1,11 @@
+{
+    // 设置保存自动格式化
+    // "editor.formatOnSave": true,
+    // 设置使用 Prettier 进行格式化
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //  以下设置，仅针对 javascript 语言生效
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

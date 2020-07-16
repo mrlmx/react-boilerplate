@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/mrlmx/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/mrlmx/react-boilerplate#readme"
+  "homepage": "https://github.com/mrlmx/react-boilerplate#readme",
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
 }
