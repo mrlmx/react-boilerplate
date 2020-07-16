@@ -4,6 +4,7 @@
   "description": "A react boilerplate with mobx, typescript and webpack",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
