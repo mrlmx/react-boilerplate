@@ -4,6 +4,8 @@
   "description": "A react boilerplate with mobx, typescript and webpack",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --config dev.config.js",
+    "build": "webpack",
     "prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +27,9 @@
   },
   "homepage": "https://github.com/mrlmx/react-boilerplate#readme",
   "devDependencies": {
-    "prettier": "2.0.5"
-  }
+    "prettier": "2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
 }
