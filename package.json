@@ -20,7 +20,11 @@
     "webpack",
     "boilerplate"
   ],
-  "author": "limingxin",
+  "author": {
+    "name": "limingxin",
+    "url": "https://github.com/mrlmx",
+    "email": "mrlimingxin@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mrlmx/react-boilerplate/issues"
