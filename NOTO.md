@@ -103,3 +103,5 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 - [TypeScript 中高级应用与最佳实践](http://www.alloyteam.com/2019/07/13796/)
 - [Bruce Cli](https://yangzw.vip/source?id=bruce-cli)
 - [Create App](https://createapp.dev/webpack)
+- [Vue + Vant 移动端解决方案](https://mp.weixin.qq.com/s/MymdHWyHKNNxeSXIdB0qRw)
+- [[2.7w字]我是这样搭建 React+Typescript项目环境的(上)](https://juejin.im/post/6860129883398668296)
