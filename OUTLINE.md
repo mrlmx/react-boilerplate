@@ -33,8 +33,10 @@
 
 ### WebPack
 
+- polyfills（https://webpack.docschina.org/guides/shimming/）
 - CDN
 - SoureMap
+- Service Worker
 
 ## 高级进阶
 
