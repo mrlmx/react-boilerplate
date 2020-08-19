@@ -4,7 +4,7 @@
   "description": "A react boilerplate with mobx, typescript and webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config dev.config.js",
+    "dev": "webpack --config ./config/webpack.config.js",
     "build": "webpack",
     "prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
