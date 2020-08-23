@@ -2,6 +2,26 @@
 
 在这里记录此项目搭建的过程。
 
+在开始前，咱们先明确一下当前的操作环境：
+
+- Node.js：v12.16.3
+- NPM：6.14.7
+- Git：2.24.3
+
+分别执行如下命令查看：
+
+```bash
+// 查看 node 版本
+node -v
+
+// 查看 npm 版本
+npm -v
+
+// 查看 git 版本
+git --version
+```
+
+
 ## 初始化仓库
 
 创建一个空目录，然后初始化 git。
@@ -56,7 +76,37 @@ yarn add webpack webpack-cli --dev
 console.log("Hi");
 ```
 
-在项目的根目录新建 webpack.config.js 文件
+然后执行打包命令：
+
+```
+npx webpack
+```
+
+如果看到如下类似内容，就表明打包成功啦：
+
+```
+react-boilerplate % npx webpack
+Hash: c46be31efd8adf672565
+Version: webpack 4.43.0
+Time: 55ms
+Built at: 2020-08-23 21:15:02
+  Asset       Size  Chunks             Chunk Names
+main.js  947 bytes       0  [emitted]  main
+Entrypoint main = main.js
+[0] ./src/index.js 19 bytes {0} [built]
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+````
+注意：
+
+- 这里用到了 `npx` 这个命令，需要你的 npm 版本大于 5.2。（关于 `npx` 命令，可以看[这篇文章](http://www.ruanyifeng.com/blog/2019/02/npx.html)）
+- 由于我们没有指定打包的模式，所以会输出的黄字信息，这里可以暂时不用关心，咱们后续处理。
+
+虽然打包成功了，但是一般来说，我们习惯于使用 npm script 命令进行打包，下面咱们来配置一下吧。
+
+首先在项目的根目录新建 webpack.config.js 文件
 
 ```js
 const path = require("path");
@@ -70,14 +120,25 @@ module.exports = {
 };
 ```
 
-然后在 package.json 中新增 2 个命令：
+然后在 package.json 中新增 1 个命令：
 
 ```js
 "scripts": {
-    "dev": "webpack --config dev.config.js",
-    "build": "webpack",
+    "build": "webpack --config dev.config.js",
 },
 ```
+
+配置完成之后，执行如下命令，再次尝试打包：
+
+```
+npm run biuld
+```
+
+可以看到，输出的内容和刚刚的一样，说明咱们的配置没有问题，但是这次试用的是 `npm run build` 这个命令，是不是瞬间觉得有内味了？[奸笑]
+
+### 区分环境
+
+### 清理老的打包文件
 
 ### webpack Feature
 
