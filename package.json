@@ -4,8 +4,8 @@
   "description": "A react boilerplate with mobx, typescript and webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config ./config/webpack.config.js",
-    "build": "webpack",
+    "dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js",
     "prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,9 +31,11 @@
   },
   "homepage": "https://github.com/mrlmx/react-boilerplate#readme",
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "prettier": "2.0.5",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.2"
   },
   "dependencies": {}
 }
