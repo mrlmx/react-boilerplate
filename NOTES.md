@@ -58,6 +58,45 @@ yarn add --dev --exact prettier
 }
 ```
 
+### ESLint 配置
+
+先在本地安装 eslint：
+
+```
+yarn add react
+yarn add eslint typescript --dev
+```
+
+注意，在这里，我还额外安装了 react 和 typescript，这样做的原因是想要使用 eslint 校验 react 和 typescript，而校验他们就需要安装他们本身。
+
+现在执行 `npx` 命令，执行 eslint，生成配置文件：
+
+```
+npx eslint --init
+```
+
+这里提供一下我生成配置文件时，做出的选择（当前 ESLint 版本为：7.7.0）：
+
+- How would you like to use ESLint?
+    - To check syntax, find problems, and enforce code style
+- What type of modules does your project use?
+    - JavaScript modules (import/export)
+- Which framework does your project use?
+    - React
+- Does your project use TypeScript?
+    - Yes
+- Where does your code run?
+    - Browser
+    - Node
+- How would you like to define a style for your project?
+    - Use a popular style guide
+- Which style guide do you want to follow?
+    - Airbnb: https://github.com/airbnb/javascript
+- What format do you want your config file to be in?
+    - JavaScript
+- Would you like to install them now with npm?
+    - Yes
+
 ## webpack 配置
 
 虽然目前 webpack 5 的 beta 版已经发布了，但是还没发布正式版，所以为了避免不兼容的情况，还是使用最新的稳定版，等待后续 webpack 5 正式版发布以后，再统一升级。
