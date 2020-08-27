@@ -1,11 +1,42 @@
 {
+    // 指定哪些文件不参与搜索
+    "search.exclude": {
+        "**/node_modules": true,
+        "dist": true,
+        "yarn.lock": true
+    },
     // 设置保存自动格式化
-    // "editor.formatOnSave": true,
-    // 设置使用 Prettier 进行格式化
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     //  以下设置，仅针对 javascript 语言生效
     "[javascript]": {
-        "editor.formatOnSave": true,
+        // 设置使用 Prettier 进行格式化
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[less]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
