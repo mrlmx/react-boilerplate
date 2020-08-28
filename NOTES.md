@@ -107,7 +107,7 @@ eslint 配置完成之后，打开 src/index.js 文件后，发现 eslint 提示
 yarn add eslint-config-prettier --dev
 ```
 
-然后打开 .eslintrc.js 文件，进行如下修改：
+然后打开 .eslintrc.js 文件，加上如下配置（后面需要确认一下到底需要哪几个插件[Prettier：Integrating with Linters](https://prettier.io/docs/en/integrating-with-linters.html)）：
 
 ```diff
 ...
@@ -116,6 +116,7 @@ yarn add eslint-config-prettier --dev
      "airbnb",
 +    "prettier",
 +    "prettier/@typescript-eslint",
++    "prettier/react",
  ],
 ...
 ```
