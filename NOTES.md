@@ -97,6 +97,31 @@ npx eslint --init
 - Would you like to install them now with npm?
     - Yes
 
+eslint 配置完成之后，打开 src/index.js 文件后，发现 eslint 提示不能使用双引号。
+
+这下就尴尬了，所以需要先解决一下 eslint 和 prettier 的冲突。
+
+这里安装 prettier 官方提供的 eslint 插件（这里是不是有点绕口？[狗头]）
+
+```
+yarn add eslint-config-prettier --dev
+```
+
+然后打开 .eslintrc.js 文件，进行如下修改：
+
+```diff
+...
+ extends: [
+     "plugin:react/recommended",
+     "airbnb",
++    "prettier",
++    "prettier/@typescript-eslint",
+ ],
+...
+```
+
+现在打开 src/index.js 文件，发现已经不报错了，瞬间舒服多了。
+
 ## webpack 配置
 
 虽然目前 webpack 5 的 beta 版已经发布了，但是还没发布正式版，所以为了避免不兼容的情况，还是使用最新的稳定版，等待后续 webpack 5 正式版发布以后，再统一升级。
