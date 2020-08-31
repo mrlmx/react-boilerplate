@@ -1,15 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const {
-    ENTRY_PATH,
-    BUILD_PATH,
-    isPro,
-    isDev,
-    resolveApp,
-} = require("./constant");
+const { ENTRY_PATH, BUILD_PATH, isPro, resolveApp } = require("./constant");
 
 module.exports = {
     entry: ENTRY_PATH,
-    devtool: isDev && "cheap-module-source-map",
     output: {
         filename: isPro ? "js/[name].[hash:8].js" : "js/[name].js",
         path: BUILD_PATH,
