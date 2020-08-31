@@ -67,7 +67,7 @@ yarn add react
 yarn add eslint typescript --dev
 ```
 
-注意，在这里，我还额外安装了 react 和 typescript，这样做的原因是想要使用 eslint 校验 react 和 typescript，而校验他们就需要安装他们本身。
+注意，在这里，我还额外安装了 react 和 typescript，这样做的原因是想要使用 eslint 校验 react 和 typescript，而校验他们就需要安装他们本身。（后续整理为先搭建基础架构，在加入各类 Lint，这样会比较好理解一些。）
 
 现在执行 `npx` 命令，执行 eslint，生成配置文件：
 
@@ -122,6 +122,39 @@ yarn add eslint-config-prettier --dev
 ```
 
 现在打开 src/index.js 文件，发现已经不报错了，瞬间舒服多了。
+
+但是如果你打开 config/webpack.dev.js 文件的话，会提示如下错误：
+
+```
+'webpack-merge' should be listed in the project's dependencies, not devDependencies.(eslintimport/no-extraneous-dependencies)
+``
+
+这是因为 eslint 的另外一个[规则](https://github.com/benmosher/eslint-plugin-import/blob/v2.22.0/docs/rules/no-extraneous-dependencies.md)。
+
+主要的原因是，在项目中引入了外部模块，但是这个模块在 package.json 中声明的是 devDependencies，应该将它改为 dependencies。
+
+但是，webpack-merge 这个模块，本应该就是开发依赖，所以需要改一下 eslint 的这个规则。
+
+解决办法也很简单，要么关掉这个规则，要么把不想校验这个规则的文件告诉 eslint：
+
+```
+...
+rules: {
+    //  方案一：关掉 eslintimport/no-extraneous-dependencies 这个规则
+    "import/no-extraneous-dependencies": "off",
+
+    //  方案二：将 config 目录下的 js 文件，设置为 true（不校验 devDependencies）
+    "import/no-extraneous-dependencies": [
+        "error",
+        {
+            devDependencies: ["config/**/*.js"],
+        },
+    ],
+},
+...
+```
+
+这里建议选择方案二（两种方案任选其一即可。）
 
 ## webpack 配置
 
