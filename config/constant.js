@@ -24,5 +24,6 @@ module.exports = {
     NODE_ENV,
     isDev,
     isPro,
+    resolveApp,
     ...paths,
 };
