@@ -1,4 +1,3 @@
-const path = require("path");
 const { ENTRY_PATH, BUILD_PATH, isPro } = require("./constant");
 
 module.exports = {

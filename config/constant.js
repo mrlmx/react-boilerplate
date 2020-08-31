@@ -8,7 +8,7 @@ const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 const PROJECT_NAME = path.parse(resolveApp(".")).name;
 
-const NODE_ENV = process.env.NODE_ENV;
+const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === "development";
 const isPro = NODE_ENV === "production";
 
