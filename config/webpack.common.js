@@ -15,7 +15,8 @@ module.exports = {
             cache: false,
             minify: isPro
                 ? {
-                      //   removeAttributeQuotes: true,
+                      // 这里列出了所有的选项，对应的含义也可以在此查询
+                      // https://github.com/terser/html-minifier-terser#options-quick-reference
                       collapseWhitespace: true,
                       removeComments: true,
                       collapseBooleanAttributes: true,
