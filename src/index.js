@@ -1,3 +1,5 @@
+import "./index.css";
+
 console.log("Hi");
 
 const hi = document.createElement("h1");
