@@ -12,6 +12,9 @@ const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === "development";
 const isPro = NODE_ENV === "production";
 
+const SERVER_HOST = "127.0.0.1";
+const SERVER_PORT = 3000;
+
 const paths = {
     PROJECT_PATH: resolveApp("."),
     ENTRY_PATH: resolveApp("./src/index"),
@@ -22,6 +25,8 @@ const paths = {
 module.exports = {
     PROJECT_NAME,
     NODE_ENV,
+    SERVER_HOST,
+    SERVER_PORT,
     isDev,
     isPro,
     resolveApp,
