@@ -20,5 +20,13 @@ module.exports = {
         sourceType: "module",
     },
     plugins: ["react", "@typescript-eslint"],
-    rules: {},
+    rules: {
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                // 将 config 目录下的 js 文件，设置为 true（不校验 devDependencies）
+                devDependencies: ["config/**/*.js"],
+            },
+        ],
+    },
 };
