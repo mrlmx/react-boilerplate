@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {
     ENTRY_PATH,
@@ -24,7 +25,25 @@ module.exports = {
                         options: {
                             modules: false,
                             sourceMap: isDev,
-                            importLoaders: 0,
+                            importLoaders: 1,
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            ident: "postcss",
+                            plugins: [
+                                require("postcss-flexbugs-fixes"),
+                                require("postcss-preset-env")({
+                                    autoprefixer: {
+                                        grid: true,
+                                        flexbox: "no-2009",
+                                    },
+                                    stage: 3,
+                                }),
+                                require("postcss-normalize"),
+                            ],
+                            sourceMap: isDev,
                         },
                     },
                 ],
@@ -38,7 +57,25 @@ module.exports = {
                         options: {
                             modules: false,
                             sourceMap: isDev,
-                            importLoaders: 1, // 需要先被 less-loader 处理，所以这里设置为 1
+                            importLoaders: 2, // 需要先被 less-loader 处理，所以这里设置为 1
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            ident: "postcss",
+                            plugins: [
+                                require("postcss-flexbugs-fixes"),
+                                require("postcss-preset-env")({
+                                    autoprefixer: {
+                                        grid: true,
+                                        flexbox: "no-2009",
+                                    },
+                                    stage: 3,
+                                }),
+                                require("postcss-normalize"),
+                            ],
+                            sourceMap: isDev,
                         },
                     },
                     {
