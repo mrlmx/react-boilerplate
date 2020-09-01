@@ -1,4 +1,5 @@
 import "./index.css";
+import "./reset.less";
 
 console.log("Hi");
 

@@ -245,6 +245,10 @@ npm run biuld
 - css
  - style-loader
  - css-loader
+- less
+ - style-loader
+ - css-loader
+ - less-loader
 
 ### webpack Feature
 

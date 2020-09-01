@@ -29,6 +29,26 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.less$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: false,
+                            sourceMap: isDev,
+                            importLoaders: 1, // 需要先被 less-loader 处理，所以这里设置为 1
+                        },
+                    },
+                    {
+                        loader: "less-loader",
+                        options: {
+                            sourceMap: isDev,
+                        },
+                    },
+                ],
+            },
         ],
     },
     plugins: [
