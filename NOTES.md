@@ -240,6 +240,10 @@ npm run biuld
 
 ### devServer
 
+- 本地环境
+- 接口转发
+- HRM
+
 ### Loader
 
 - css
