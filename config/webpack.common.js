@@ -8,6 +8,38 @@ const {
     resolveApp,
 } = require("./constant");
 
+const getCssLoaders = (importLoaders) => {
+    return [
+        "style-loader",
+        {
+            loader: "css-loader",
+            options: {
+                modules: false,
+                sourceMap: isDev,
+                importLoaders,
+            },
+        },
+        {
+            loader: "postcss-loader",
+            options: {
+                ident: "postcss",
+                plugins: [
+                    require("postcss-flexbugs-fixes"),
+                    require("postcss-preset-env")({
+                        autoprefixer: {
+                            grid: true,
+                            flexbox: "no-2009",
+                        },
+                        stage: 3,
+                    }),
+                    require("postcss-normalize"),
+                ],
+                sourceMap: isDev,
+            },
+        },
+    ];
+};
+
 module.exports = {
     entry: ENTRY_PATH,
     output: {
@@ -18,66 +50,12 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: false,
-                            sourceMap: isDev,
-                            importLoaders: 1,
-                        },
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            ident: "postcss",
-                            plugins: [
-                                require("postcss-flexbugs-fixes"),
-                                require("postcss-preset-env")({
-                                    autoprefixer: {
-                                        grid: true,
-                                        flexbox: "no-2009",
-                                    },
-                                    stage: 3,
-                                }),
-                                require("postcss-normalize"),
-                            ],
-                            sourceMap: isDev,
-                        },
-                    },
-                ],
+                use: [...getCssLoaders(1)],
             },
             {
                 test: /\.less$/,
                 use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: false,
-                            sourceMap: isDev,
-                            importLoaders: 2, // 需要先被 less-loader 处理，所以这里设置为 1
-                        },
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            ident: "postcss",
-                            plugins: [
-                                require("postcss-flexbugs-fixes"),
-                                require("postcss-preset-env")({
-                                    autoprefixer: {
-                                        grid: true,
-                                        flexbox: "no-2009",
-                                    },
-                                    stage: 3,
-                                }),
-                                require("postcss-normalize"),
-                            ],
-                            sourceMap: isDev,
-                        },
-                    },
+                    ...getCssLoaders(2),
                     {
                         loader: "less-loader",
                         options: {
