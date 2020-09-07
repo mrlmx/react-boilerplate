@@ -64,6 +64,31 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            limit: 10 * 1024,
+                            name: "[name].[contenthash:8].[ext]",
+                            outputPath: "assets/images",
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(ttf|woff|woff2|eot|otf)$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            name: "[name].[contenthash:8].[ext]",
+                            outputPath: "assets/fonts",
+                        },
+                    },
+                ],
+            },
         ],
     },
     plugins: [
