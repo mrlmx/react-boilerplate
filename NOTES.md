@@ -253,6 +253,9 @@ npm run biuld
  - style-loader
  - css-loader
  - less-loader
+ - post-loader
+
+使用 [favicon.io](https://favicon.io/favicon-generator/) 在线生成 favicon。
 
 ### webpack Feature
 

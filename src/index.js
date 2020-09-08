@@ -1,5 +1,6 @@
 import "./index.css";
 import "./reset.less";
+import "./assets/logo.png";
 
 console.log("Hi");
 
