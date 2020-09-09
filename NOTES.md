@@ -265,9 +265,17 @@ npm run biuld
 
 使用 [favicon.io](https://favicon.io/favicon-generator/) 在线生成 favicon。
 
+### 配置 ts & tsx
+
+- [future-typescript-eslint#the-future-of-typescript-on-eslint](https://eslint.org/blog/2019/01/future-typescript-eslint#the-future-of-typescript-on-eslint)：使用 ESLint 校验 TypeScript。
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md)：typescript-eslint 的基础使用。
+
+
 ### 关于 Babel 的文章
 
 ### 关于 webpack 的文章
+
+### 关于 ESLint 的文章
 
 ### webpack Feature
 
