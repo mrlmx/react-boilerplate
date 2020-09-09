@@ -267,8 +267,21 @@ npm run biuld
 
 ### 配置 ts & tsx
 
-- [future-typescript-eslint#the-future-of-typescript-on-eslint](https://eslint.org/blog/2019/01/future-typescript-eslint#the-future-of-typescript-on-eslint)：使用 ESLint 校验 TypeScript。
-- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md)：typescript-eslint 的基础使用。
+- 安装 TypeScript 依赖
+    - 生成 tsconfig.json 文件（[tsconfig 选项的中文介绍](https://www.tslang.cn/docs/handbook/compiler-options.html)）
+    - 这里配置 tsconfig.json 的主要目的是为了让 编辑器 能够正确的提示错误
+    - [tsconfig.json 中 compilerOptions.module 的值都有什么区别？](https://www.staging-typescript.org/tsconfig#module)
+    - [为什么 esnext, es6, es2015 打包出来的代码都一样？](https://github.com/microsoft/TypeScript/issues/24082)
+    - [target 和 lib 的区别是什么？他们分别有什么作用？](https://stackoverflow.com/questions/42093758/need-clarification-of-the-target-and-lib-compiler-options)：为什么设置了 target，却又要设置 lib？
+    - tsconfig.json 中 compilerOptions.paths 和 webpack 的 resolve.alias 有什么区别？
+        - webpack 的配置，是为了在打包时，能够正确的找到文件路径
+        - tsconfig.json 的配置，是为了在开发时，编辑器不报错（如果需要引入图片等其他除资源，需要在 d.ts 中声明。详情可见：`./src/types/files.d.ts` 文件）
+- 使用 Babel 处理 ts 文件
+- 配置 ESLint 校验 ts 文件
+    - [future-typescript-eslint#the-future-of-typescript-on-eslint](https://eslint.org/blog/2019/01/future-typescript-eslint#the-future-of-typescript-on-eslint)：使用 ESLint 校验 TypeScript。
+    - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md)：typescript-eslint 的基础使用。
+- 配置 Babel 处理 tsx 文件
+- 配置 ESLint 校验 tsx 文件
 
 
 ### 关于 Babel 的文章

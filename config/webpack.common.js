@@ -48,6 +48,10 @@ module.exports = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+        alias: {
+            "@": resolveApp("src"),
+            assets: resolveApp("src/assets"),
+        },
     },
     module: {
         rules: [
