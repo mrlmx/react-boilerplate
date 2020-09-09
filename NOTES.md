@@ -257,8 +257,17 @@ npm run biuld
 - 静态资源（图片与字体）
  - url-loader
  - file-loader
+- ts & js
+- tsx & jsx
+ - babel-loader
+ - @babel/core
+ - @babel/preset-react
 
 使用 [favicon.io](https://favicon.io/favicon-generator/) 在线生成 favicon。
+
+### 关于 Babel 的文章
+
+### 关于 webpack 的文章
 
 ### webpack Feature
 

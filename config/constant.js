@@ -17,7 +17,7 @@ const SERVER_PORT = 3000;
 
 const paths = {
     PROJECT_PATH: resolveApp("."),
-    ENTRY_PATH: resolveApp("./src/index"),
+    ENTRY_PATH: resolveApp("./src/index.jsx"),
     PUBLIC_PATH: resolveApp("public"),
     BUILD_PATH: resolveApp("dist"),
 };

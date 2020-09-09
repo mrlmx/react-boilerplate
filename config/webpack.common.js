@@ -46,8 +46,17 @@ module.exports = {
         filename: isPro ? "js/[name].[hash:8].js" : "js/[name].js",
         path: BUILD_PATH,
     },
+    resolve: {
+        extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+    },
     module: {
         rules: [
+            {
+                test: /\.(tsx|ts|jsx|js)$/,
+                loader: "babel-loader",
+                options: { cacheDirectory: true },
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 use: [...getCssLoaders(1)],
