@@ -254,6 +254,9 @@ npm run biuld
  - css-loader
  - less-loader
  - post-loader
+- 静态资源（图片与字体）
+ - url-loader
+ - file-loader
 
 使用 [favicon.io](https://favicon.io/favicon-generator/) 在线生成 favicon。
 
