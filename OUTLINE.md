@@ -36,6 +36,7 @@
 - polyfills（https://webpack.docschina.org/guides/shimming/）
 - CDN
 - SoureMap
+- HMR
 - Service Worker
 
 ## 高级进阶

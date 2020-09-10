@@ -283,6 +283,9 @@ npm run biuld
 - 配置 Babel 处理 tsx 文件
 - 配置 ESLint 校验 tsx 文件
 
+### 配置 browserslist
+
+通过 browserslist 设置项目支持的浏览器版本
 
 ### 关于 Babel 的文章
 
@@ -294,6 +297,7 @@ npm run biuld
 
 - 动态引入 polyfill
 - 资源打包到 CDN
+- HMR
 
 ### 番外
 
