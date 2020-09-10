@@ -1090,6 +1090,11 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/webpack-env@^1.15.2":
+  version "1.15.2"
+  resolved "https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.15.2.tgz#927997342bb9f4a5185a86e6579a0a18afc33b0a"
+  integrity sha1-knmXNCu59KUYWobmV5oKGK/DOwo=
+
 "@types/webpack-sources@*":
   version "1.4.2"
   resolved "https://registry.npm.taobao.org/@types/webpack-sources/download/@types/webpack-sources-1.4.2.tgz#5d3d4dea04008a779a90135ff96fb5c0c9e6292c"
