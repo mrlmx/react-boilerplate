@@ -299,6 +299,10 @@ npm run biuld
 - 资源打包到 CDN
 - HMR
 
+### CSS 重置
+
+- Normalize.css
+
 ### 番外
 
 #### 如何快速创建一个 webpack 模板？
