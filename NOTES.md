@@ -271,6 +271,7 @@ npm run biuld
 - webpackbar（显示 webpack 执行进度）
 - fork-ts-checker-webpack-plugin（编译 ts 时，将错误打印在控制台）
 - hard-source-webpack-plugin（加快 webpack 二次编译的速度）
+- SplitChunksPlugin（将第三方库拆分打包：TODO）
 
 ### 配置 ts & tsx
 
