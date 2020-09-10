@@ -265,6 +265,11 @@ npm run biuld
 
 使用 [favicon.io](https://favicon.io/favicon-generator/) 在线生成 favicon。
 
+### plugins
+
+- copy-webpack-plugin（自动将 public 目录下的文件复制到 dist 目录中）
+- webpackbar（显示 webpack 执行进度）
+
 ### 配置 ts & tsx
 
 - 安装 TypeScript 依赖
