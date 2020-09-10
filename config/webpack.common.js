@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const WebpackBar = require("webpackbar");
 const {
     ENTRY_PATH,
@@ -132,6 +133,11 @@ module.exports = {
         new WebpackBar({
             name: isDev ? "正在启动" : "正在打包",
             color: "#fa8c16",
+        }),
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: resolveApp("./tsconfig.json"),
+            },
         }),
     ],
 };
