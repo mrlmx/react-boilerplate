@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackBar = require("webpackbar");
 const {
     ENTRY_PATH,
     BUILD_PATH,
@@ -127,6 +128,10 @@ module.exports = {
                       useShortDoctype: true,
                   }
                 : false,
+        }),
+        new WebpackBar({
+            name: isDev ? "正在启动" : "正在打包",
+            color: "#fa8c16",
         }),
     ],
 };
