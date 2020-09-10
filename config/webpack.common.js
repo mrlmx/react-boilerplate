@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 const WebpackBar = require("webpackbar");
 const {
     ENTRY_PATH,
@@ -139,5 +140,6 @@ module.exports = {
                 configFile: resolveApp("./tsconfig.json"),
             },
         }),
+        new HardSourceWebpackPlugin(),
     ],
 };

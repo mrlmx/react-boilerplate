@@ -270,6 +270,7 @@ npm run biuld
 - copy-webpack-plugin（自动将 public 目录下的文件复制到 dist 目录中）
 - webpackbar（显示 webpack 执行进度）
 - fork-ts-checker-webpack-plugin（编译 ts 时，将错误打印在控制台）
+- hard-source-webpack-plugin（加快 webpack 二次编译的速度）
 
 ### 配置 ts & tsx
 
