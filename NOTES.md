@@ -334,3 +334,4 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 - [[2.7w字]我是这样搭建 React+Typescript项目环境的(上)](https://juejin.im/post/6860129883398668296)
 - [vue-cli4-config](https://github.com/staven630/vue-cli4-config)
 - [project-guidelines](https://github.com/elsewhencode/project-guidelines)
+- [Webpack HMR 原理解析](https://zhuanlan.zhihu.com/p/30669007)
