@@ -273,6 +273,7 @@ npm run biuld
 - hard-source-webpack-plugin（加快 webpack 二次编译的速度）
 - SplitChunksPlugin（将第三方库拆分打包：TODO）
 - react-refresh-webpack-plugin（通过此插件，实现 react 的 HMR 功能）
+- mini-css-extract-plugin（将 css 提取为独立 css 文件）
 
 ### 配置 ts & tsx
 

@@ -6,19 +6,28 @@ import GitHubRequest from "@/components/GitHubRequest";
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <h1>基础输出</h1>
-            Hello World
-            <img
-                src={Logo}
-                style={{ width: "50px", margin: "30px 0", display: "block" }}
-            ></img>
+            <div className="wrapper">
+                Hello World
+                <img
+                    src={Logo}
+                    style={{
+                        width: "50px",
+                        margin: "30px 0",
+                        display: "block",
+                    }}
+                ></img>
+            </div>
             <h1>展示组件</h1>
-            <Textarea />
-            <br />
-            <Button>按钮</Button>
+            <div className="wrapper">
+                <Textarea />
+                <Button>按钮</Button>
+            </div>
             <h1>测试请求</h1>
-            <GitHubRequest />
+            <div className="wrapper">
+                <GitHubRequest />
+            </div>
         </div>
     );
 }

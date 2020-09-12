@@ -2,6 +2,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackBar = require("webpackbar");
 const {
     ENTRY_PATH,
@@ -13,7 +14,7 @@ const {
 
 const getCssLoaders = (importLoaders) => {
     return [
-        "style-loader",
+        isDev ? "style-loader" : MiniCssExtractPlugin.loader,
         {
             loader: "css-loader",
             options: {
