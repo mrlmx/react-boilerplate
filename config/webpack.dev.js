@@ -17,6 +17,16 @@ module.exports = merge(common, {
         hot: true,
         hotOnly: true,
         historyApiFallback: true,
+        proxy: {
+            "/api": {
+                logLevel: "debug",
+                changeOrigin: true,
+                target: "http://api.github.com",
+                pathRewrite: {
+                    "^/api": "",
+                },
+            },
+        },
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

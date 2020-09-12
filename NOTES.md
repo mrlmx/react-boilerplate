@@ -336,3 +336,4 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 - [vue-cli4-config](https://github.com/staven630/vue-cli4-config)
 - [project-guidelines](https://github.com/elsewhencode/project-guidelines)
 - [Webpack HMR 原理解析](https://zhuanlan.zhihu.com/p/30669007)
+- [如何在 JXS 语法中输出大括号 `{}`？](https://github.com/facebook/react/issues/1545)

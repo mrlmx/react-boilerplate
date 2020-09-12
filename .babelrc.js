@@ -2,7 +2,7 @@ const constant = require("./config/constant");
 module.exports = function (api) {
     // api.cache.using(() => process.env.NODE_ENV);
     api.cache(true);
-    const presets= [
+    const presets = [
         [
             "@babel/preset-env",
             {
@@ -12,7 +12,7 @@ module.exports = function (api) {
         ],
         "@babel/preset-react",
         "@babel/preset-typescript",
-    ],
+    ];
     const plugins = [
         [
             "@babel/plugin-transform-runtime",
