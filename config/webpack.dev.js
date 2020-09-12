@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 const { SERVER_HOST, SERVER_PORT } = require("./constant");
@@ -14,7 +15,11 @@ module.exports = merge(common, {
         compress: true,
         open: true,
         hot: true,
+        hotOnly: true,
         historyApiFallback: true,
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()],
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new ReactRefreshWebpackPlugin(),
+    ],
 });
