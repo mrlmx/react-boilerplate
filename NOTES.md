@@ -274,6 +274,7 @@ npm run biuld
 - SplitChunksPlugin（将第三方库拆分打包：TODO）
 - react-refresh-webpack-plugin（通过此插件，实现 react 的 HMR 功能）
 - mini-css-extract-plugin（将 css 提取为独立 css 文件）
+- purgecss-webpack-plugin（打包时，移除无用的 css）
 
 ### 配置 ts & tsx
 
@@ -338,3 +339,4 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 - [project-guidelines](https://github.com/elsewhencode/project-guidelines)
 - [Webpack HMR 原理解析](https://zhuanlan.zhihu.com/p/30669007)
 - [如何在 JXS 语法中输出大括号 `{}`？](https://github.com/facebook/react/issues/1545)
+- [node-glob](https://github.com/isaacs/node-glob)：可以根据规则匹配相关文件

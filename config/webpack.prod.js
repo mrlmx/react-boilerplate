@@ -1,9 +1,11 @@
+const glob = require("glob");
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
 const common = require("./webpack.common.js");
-const { PUBLIC_PATH, BUILD_PATH } = require("./constant");
+const { PUBLIC_PATH, BUILD_PATH, SRC_PATH } = require("./constant");
 
 module.exports = merge(common, {
     mode: "production",
@@ -19,6 +21,9 @@ module.exports = merge(common, {
             filename: "css/[name].[contenthash:8].css",
             chunkFilename: "css/[name].[contenthash:8].css",
             ignoreOrder: false,
+        }),
+        new PurgecssPlugin({
+            paths: glob.sync(`${SRC_PATH}/**/*`, { nodir: true }),
         }),
     ],
 });

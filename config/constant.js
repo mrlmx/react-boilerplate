@@ -20,6 +20,7 @@ const paths = {
     ENTRY_PATH: resolveApp("./src/index.tsx"),
     PUBLIC_PATH: resolveApp("public"),
     BUILD_PATH: resolveApp("dist"),
+    SRC_PATH: resolveApp("src"),
 };
 
 module.exports = {
