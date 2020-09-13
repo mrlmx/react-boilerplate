@@ -275,6 +275,8 @@ npm run biuld
 - react-refresh-webpack-plugin（通过此插件，实现 react 的 HMR 功能）
 - mini-css-extract-plugin（将 css 提取为独立 css 文件）
 - purgecss-webpack-plugin（打包时，移除无用的 css）
+- optimize-css-assets-webpack-plugin（压缩 css）
+- terser-webpack-plugin（压缩 javascript）
 
 ### 配置 ts & tsx
 
