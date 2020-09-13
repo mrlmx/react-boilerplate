@@ -14,6 +14,7 @@ const GitHubRequest: FC = () => {
     const handleSearch = () => {
         axios.get("/api/repos/" + repoName).then(({ data }) => {
             setRepoInfo(data);
+            console.log("production mode will remove this console");
         });
     };
     useEffect(() => {
