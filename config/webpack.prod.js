@@ -5,6 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const common = require("./webpack.common.js");
 const { PUBLIC_PATH, BUILD_PATH, SRC_PATH } = require("./constant");
 
@@ -42,5 +43,6 @@ module.exports = merge(common, {
         new PurgecssPlugin({
             paths: glob.sync(`${SRC_PATH}/**/*`, { nodir: true }),
         }),
+        new OptimizeCssAssetsPlugin(),
     ],
 });
