@@ -3,6 +3,7 @@ import Logo from "@/assets/logo.png";
 import Button from "@/components/Button";
 import Textarea from "@/components/Textarea";
 import GitHubRequest from "@/components/GitHubRequest";
+import { copyToClipboard, scrollToTop } from "@/utils/helper";
 
 function App() {
     return (
@@ -27,6 +28,16 @@ function App() {
             <h1>测试请求</h1>
             <div className="wrapper">
                 <GitHubRequest />
+            </div>
+            <h1>工具函数</h1>
+            <div className="wrapper">
+                <button
+                    onClick={() => {
+                        copyToClipboard("复制成功");
+                    }}
+                >
+                    复制到剪切板
+                </button>
             </div>
         </div>
     );
