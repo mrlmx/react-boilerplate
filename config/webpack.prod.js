@@ -1,4 +1,5 @@
 const glob = require("glob");
+const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -21,9 +22,9 @@ module.exports = merge(common, {
                 extractComments: false,
                 terserOptions: {
                     // 移除注释
-                    output: {
-                        comments: false,
-                    },
+                    // output: {
+                    //     comments: false,
+                    // },
                     // 移除 console.log 函数
                     compress: { pure_funcs: ["console.log"] },
                 },
@@ -44,5 +45,11 @@ module.exports = merge(common, {
             paths: glob.sync(`${SRC_PATH}/**/*`, { nodir: true }),
         }),
         new OptimizeCssAssetsPlugin(),
+        // 使用此插件，需要把上面 optimization 中移除注释的选项关闭
+        new webpack.BannerPlugin({
+            raw: true,
+            banner:
+                "/** @preserve Powered by react-boilerplate (https://github.com/mrlmx/react-boilerplate) */",
+        }),
     ],
 });
