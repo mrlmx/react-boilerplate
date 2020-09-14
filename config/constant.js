@@ -8,9 +8,10 @@ const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 const PROJECT_NAME = path.parse(resolveApp(".")).name;
 
-const { NODE_ENV } = process.env;
+const { NODE_ENV, ANALYZER } = process.env;
 const isDev = NODE_ENV === "development";
 const isPro = NODE_ENV === "production";
+const isAnalyzer = !!ANALYZER;
 
 const SERVER_HOST = "127.0.0.1";
 const SERVER_PORT = 3000;
@@ -30,6 +31,7 @@ module.exports = {
     SERVER_PORT,
     isDev,
     isPro,
+    isAnalyzer,
     resolveApp,
     ...paths,
 };

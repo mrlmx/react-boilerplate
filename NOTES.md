@@ -277,6 +277,7 @@ npm run biuld
 - purgecss-webpack-plugin（打包时，移除无用的 css）
 - optimize-css-assets-webpack-plugin（压缩 css）
 - terser-webpack-plugin（压缩 javascript）
+- webpack-bundle-analyzer（分析打包后的文件大小）
 
 ### 配置 ts & tsx
 

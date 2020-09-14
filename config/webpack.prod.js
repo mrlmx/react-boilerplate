@@ -7,8 +7,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+    .BundleAnalyzerPlugin;
 const common = require("./webpack.common.js");
-const { PUBLIC_PATH, BUILD_PATH, SRC_PATH } = require("./constant");
+const { PUBLIC_PATH, BUILD_PATH, SRC_PATH, isAnalyzer } = require("./constant");
 
 module.exports = merge(common, {
     mode: "production",
@@ -51,5 +53,11 @@ module.exports = merge(common, {
             banner:
                 "/** @preserve Powered by react-boilerplate (https://github.com/mrlmx/react-boilerplate) */",
         }),
-    ],
+        isAnalyzer &&
+            new BundleAnalyzerPlugin({
+                analyzerMode: "server", // 开一个本地服务查看报告
+                analyzerHost: "127.0.0.1", // host 设置
+                analyzerPort: 8888, // 端口号设置
+            }),
+    ].filter(Boolean),
 });
