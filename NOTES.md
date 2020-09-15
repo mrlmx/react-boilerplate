@@ -303,6 +303,10 @@ npm run biuld
 
 ### 关于 Babel 的文章
 
+plugins
+
+- babel-plugin-transform-react-remove-prop-types（在打包的时候，移除 react 的 PropTypes）
+
 ### 关于 webpack 的文章
 
 ### 关于 ESLint 的文章

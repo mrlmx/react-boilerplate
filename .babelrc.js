@@ -25,6 +25,7 @@ module.exports = function (api) {
             },
         ],
         constant.isDev && "react-refresh/babel",
+        constant.isPro && "transform-react-remove-prop-types",
     ].filter(Boolean);
 
     return {
