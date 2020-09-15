@@ -5,6 +5,14 @@
         "dist": true,
         "yarn.lock": true
     },
+    // 关闭默认的校验
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
     // 设置保存自动格式化
     "editor.formatOnSave": true,
     //  以下设置，仅针对 javascript 语言生效

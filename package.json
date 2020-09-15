@@ -8,6 +8,9 @@
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js",
     "analyzer": "cross-env ANALYZER=true npm run build",
     "prettier": "prettier --write .",
+    "lint": "npm run lint-eslint && npm run lint-stylelint",
+    "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
+    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -87,6 +90,12 @@
     "purgecss-webpack-plugin": "^2.3.0",
     "react-refresh": "^0.8.3",
     "style-loader": "^1.2.1",
+    "stylelint": "^13.7.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
     "terser-webpack-plugin": "^4.2.0",
     "typescript": "^4.0.2",
     "url-loader": "^4.1.0",
