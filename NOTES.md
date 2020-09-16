@@ -347,3 +347,7 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 - [Webpack HMR 原理解析](https://zhuanlan.zhihu.com/p/30669007)
 - [如何在 JXS 语法中输出大括号 `{}`？](https://github.com/facebook/react/issues/1545)
 - [node-glob](https://github.com/isaacs/node-glob)：可以根据规则匹配相关文件
+- 参考写一个简单的自动部署工具
+  - [用Node.js创建命令行工具](http://www.html-js.com/article/2087)
+  - ["私人定制"CLI工具](https://zhuanlan.zhihu.com/p/84397064)
+  - [前端一键自动部署工具](https://juejin.im/post/6872914108979609614)
