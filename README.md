@@ -1,6 +1,12 @@
+<div align="center">
+
 # react-boilerplate
 
-A react boilerplate with mobx, typescript and webpack.
+![GitHub stars](https://img.shields.io/github/stars/mrlmx/react-boilerplate?style=flat-square) ![GitHub forks](https://img.shields.io/github/forks/mrlmx/react-boilerplate?style=flat-square) ![GitHub watchers](https://img.shields.io/github/watchers/mrlmx/react-boilerplate?style=flat-square) ![GitHub followers](https://img.shields.io/github/followers/mrlmx?style=flat-square)
+
+🚀 A react boilerplate with mobx, typescript and webpack.🤘
+
+</div>
 
 ## 概述
 

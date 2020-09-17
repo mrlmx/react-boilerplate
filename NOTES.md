@@ -351,3 +351,4 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
   - [用Node.js创建命令行工具](http://www.html-js.com/article/2087)
   - ["私人定制"CLI工具](https://zhuanlan.zhihu.com/p/84397064)
   - [前端一键自动部署工具](https://juejin.im/post/6872914108979609614)
+- [shields](https://shields.io/)：生成小徽章
