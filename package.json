@@ -39,7 +39,23 @@
     "Firefox ESR",
     "> 1%",
     "ie >= 11"
-  ],
+  ], 
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{tsx,ts,js}": [
+      "eslint --config .eslintrc.js"
+    ],
+    "*.{scss,less,css}": [
+      "stylelint --config .stylelintrc.js"
+    ],
+    "*.{tsx,ts,js,json,html,yml,scss,less,css,md}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.11.2",
     "axios": "^0.20.0",
@@ -78,8 +94,10 @@
     "glob": "^7.1.6",
     "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^4.4.1",
+    "husky": "^4.3.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.0",
+    "lint-staged": "^10.4.0",
     "mini-css-extract-plugin": "^0.11.2",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-flexbugs-fixes": "^4.2.1",
