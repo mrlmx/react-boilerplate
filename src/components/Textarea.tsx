@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import React from "react";
 
-const Textarea: FC = ({ children }) => {
+const Textarea: React.FC = () => {
     return <textarea />;
 };
 

@@ -3,6 +3,8 @@ import Logo from "@/assets/logo.png";
 import Button from "@/components/Button";
 import Textarea from "@/components/Textarea";
 import GitHubRequest from "@/components/GitHubRequest";
+// test Tree-Sharking
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { copyToClipboard, scrollToTop } from "@/utils/helper";
 
 function App() {
@@ -12,13 +14,14 @@ function App() {
             <div className="wrapper">
                 Hello World
                 <img
+                    alt="logo"
                     src={Logo}
                     style={{
                         width: "50px",
                         margin: "30px 0",
                         display: "block",
                     }}
-                ></img>
+                />
             </div>
             <h1>展示组件</h1>
             <div className="wrapper">
@@ -32,6 +35,7 @@ function App() {
             <h1>工具函数</h1>
             <div className="wrapper">
                 <button
+                    type="button"
                     onClick={() => {
                         copyToClipboard("复制成功");
                     }}

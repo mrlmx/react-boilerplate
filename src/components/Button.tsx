@@ -1,7 +1,16 @@
-import React, { FC } from "react";
+import React from "react";
 
-const Button: FC = ({ children }) => {
-    return <button>{children}</button>;
+interface Props {
+    children?: React.ReactNode;
+}
+
+const Button = (props: Props) => {
+    const { children } = props;
+    return <button type="button">{children}</button>;
+};
+
+Button.defaultProps = {
+    children: <></>,
 };
 
 export default Button;

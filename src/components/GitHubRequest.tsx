@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 interface IRepoInfo {
@@ -8,11 +8,11 @@ interface IRepoInfo {
     forks_count: number;
 }
 
-const GitHubRequest: FC = () => {
+const GitHubRequest: React.FC = () => {
     const [repoName, setRepoName] = useState("mrlmx/react-boilerplate");
     const [repoInfo, setRepoInfo] = useState<Partial<IRepoInfo>>({});
     const handleSearch = () => {
-        axios.get("/api/repos/" + repoName).then(({ data }) => {
+        axios.get(`/api/repos/${repoName}`).then(({ data }) => {
             setRepoInfo(data);
             console.log("production mode will remove this console");
         });
@@ -30,7 +30,9 @@ const GitHubRequest: FC = () => {
                         setRepoName(e.target.value);
                     }}
                 />
-                <button onClick={handleSearch}>搜索</button>
+                <button type="button" onClick={handleSearch}>
+                    搜索
+                </button>
                 <br />
                 <p>使用如下格式：{`{user}/{reponame}`}</p>
             </div>

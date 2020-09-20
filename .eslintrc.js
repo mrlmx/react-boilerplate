@@ -1,4 +1,9 @@
+// "off" or 0 - 关闭规则
+// "warn" or 1 - 将规则视为一个警告（不会影响退出码）
+// "error" or 2 - 将规则视为一个错误 (退出码为1)
+
 module.exports = {
+    root: true,
     env: {
         browser: true,
         es2020: true,
@@ -6,13 +11,14 @@ module.exports = {
     },
     extends: [
         "airbnb-typescript",
-        "plugin:react/recommended",
         "prettier",
         "prettier/react",
         "prettier/@typescript-eslint",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json", "tsconfig.eslint.json"],
         ecmaFeatures: {
             jsx: true,
         },

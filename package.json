@@ -1,127 +1,127 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.0.1",
-  "description": "A react boilerplate with mobx, typescript and webpack",
-  "main": "index.js",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js",
-    "analyzer": "cross-env ANALYZER=true npm run build",
-    "prettier": "prettier --write .",
-    "lint": "npm run lint-eslint && npm run lint-stylelint",
-    "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
-    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrlmx/react-boilerplate.git"
-  },
-  "keywords": [
-    "react",
-    "typescript",
-    "mobx",
-    "webpack",
-    "boilerplate"
-  ],
-  "author": {
-    "name": "limingxin",
-    "url": "https://github.com/mrlmx",
-    "email": "mrlimingxin@gmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mrlmx/react-boilerplate/issues"
-  },
-  "homepage": "https://github.com/mrlmx/react-boilerplate#readme",
-  "browserslist": [
-    "last 2 versions",
-    "Firefox ESR",
-    "> 1%",
-    "ie >= 11"
-  ], 
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "react-boilerplate",
+    "version": "0.0.1",
+    "description": "A react boilerplate with mobx, typescript and webpack",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.js",
+        "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js",
+        "analyzer": "cross-env ANALYZER=true npm run build",
+        "prettier": "prettier --write .",
+        "lint": "npm run lint-eslint && npm run lint-stylelint",
+        "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
+        "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrlmx/react-boilerplate.git"
+    },
+    "keywords": [
+        "react",
+        "typescript",
+        "mobx",
+        "webpack",
+        "boilerplate"
+    ],
+    "author": {
+        "name": "limingxin",
+        "url": "https://github.com/mrlmx",
+        "email": "mrlimingxin@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mrlmx/react-boilerplate/issues"
+    },
+    "homepage": "https://github.com/mrlmx/react-boilerplate#readme",
+    "browserslist": [
+        "last 2 versions",
+        "Firefox ESR",
+        "> 1%",
+        "ie >= 11"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{tsx,ts,js}": [
+            "eslint --config .eslintrc.js"
+        ],
+        "*.{scss,less,css}": [
+            "stylelint --config .stylelintrc.js"
+        ],
+        "*.{tsx,ts,js,json,html,yml,scss,less,css,md}": [
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "@babel/runtime-corejs3": "^7.11.2",
+        "axios": "^0.20.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/plugin-transform-runtime": "^7.11.5",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
+        "@babel/preset-typescript": "^7.10.4",
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.4.2",
+        "@types/react": "^16.9.49",
+        "@types/react-dom": "^16.9.8",
+        "@types/webpack-env": "^1.15.2",
+        "@typescript-eslint/eslint-plugin": "^4.1.1",
+        "@typescript-eslint/parser": "^4.1.1",
+        "autoprefixer": "^9.8.6",
+        "babel-loader": "^8.1.0",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.1.0",
+        "cross-env": "^7.0.2",
+        "css-loader": "^4.2.2",
+        "eslint": "^7.9.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-airbnb-typescript": "^10.0.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-react": "^7.20.6",
+        "eslint-plugin-react-hooks": "^4.1.2",
+        "file-loader": "^6.1.0",
+        "fork-ts-checker-webpack-plugin": "^5.1.0",
+        "glob": "^7.1.6",
+        "hard-source-webpack-plugin": "^0.13.1",
+        "html-webpack-plugin": "^4.4.1",
+        "husky": "^4.3.0",
+        "less": "^3.12.2",
+        "less-loader": "^7.0.0",
+        "lint-staged": "^10.4.0",
+        "mini-css-extract-plugin": "^0.11.2",
+        "optimize-css-assets-webpack-plugin": "^5.0.4",
+        "postcss-flexbugs-fixes": "^4.2.1",
+        "postcss-loader": "^3.0.0",
+        "postcss-normalize": "^9.0.0",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "2.0.5",
+        "purgecss-webpack-plugin": "^2.3.0",
+        "react-refresh": "^0.8.3",
+        "style-loader": "^1.2.1",
+        "stylelint": "^13.7.1",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+        "stylelint-order": "^4.1.0",
+        "terser-webpack-plugin": "^4.2.0",
+        "typescript": "^4.0.2",
+        "url-loader": "^4.1.0",
+        "webpack": "^4.43.0",
+        "webpack-bundle-analyzer": "^3.8.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-merge": "^5.1.2",
+        "webpackbar": "^4.0.0"
     }
-  },
-  "lint-staged": {
-    "*.{tsx,ts,js}": [
-      "eslint --config .eslintrc.js"
-    ],
-    "*.{scss,less,css}": [
-      "stylelint --config .stylelintrc.js"
-    ],
-    "*.{tsx,ts,js,json,html,yml,scss,less,css,md}": [
-      "prettier --write"
-    ]
-  },
-  "dependencies": {
-    "@babel/runtime-corejs3": "^7.11.2",
-    "axios": "^0.20.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/preset-typescript": "^7.10.4",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.2",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
-    "@types/webpack-env": "^1.15.2",
-    "@typescript-eslint/eslint-plugin": "^4.1.0",
-    "@typescript-eslint/parser": "^3.10.1",
-    "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.1.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^4.2.2",
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-airbnb-typescript": "^10.0.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0",
-    "file-loader": "^6.1.0",
-    "fork-ts-checker-webpack-plugin": "^5.1.0",
-    "glob": "^7.1.6",
-    "hard-source-webpack-plugin": "^0.13.1",
-    "html-webpack-plugin": "^4.4.1",
-    "husky": "^4.3.0",
-    "less": "^3.12.2",
-    "less-loader": "^7.0.0",
-    "lint-staged": "^10.4.0",
-    "mini-css-extract-plugin": "^0.11.2",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-flexbugs-fixes": "^4.2.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-normalize": "^9.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "2.0.5",
-    "purgecss-webpack-plugin": "^2.3.0",
-    "react-refresh": "^0.8.3",
-    "style-loader": "^1.2.1",
-    "stylelint": "^13.7.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-order": "^4.1.0",
-    "terser-webpack-plugin": "^4.2.0",
-    "typescript": "^4.0.2",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
-    "webpack-bundle-analyzer": "^3.8.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.1.2",
-    "webpackbar": "^4.0.0"
-  }
 }
