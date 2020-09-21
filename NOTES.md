@@ -331,6 +331,20 @@ plugins
 -   执行 `npx webpack-cli init` 将会有个交互式的命令行
 -   使用 [Create App](https://createapp.dev/webpack) 这个在线工具
 
+### commitlint + changelog
+
+全局安装：
+
+```
+yarn add commitizen -g
+```
+
+初始化：
+
+```
+commitizen init cz-conventional-changelog --yarn --dev --exact
+```
+
 ## 参考
 
 这里列出在项目搭建中对我有启发的文章链接。
