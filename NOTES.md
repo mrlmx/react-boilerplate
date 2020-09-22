@@ -333,10 +333,10 @@ plugins
 
 ### commitlint + changelog
 
-全局安装：
+安装依赖：
 
 ```
-yarn add commitizen -g
+yarn add commitizen -D
 ```
 
 初始化：
