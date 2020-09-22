@@ -342,7 +342,7 @@ yarn add commitizen -D
 初始化：
 
 ```
-commitizen init cz-conventional-changelog --yarn --dev --exact
+yarn commitizen init cz-conventional-changelog --yarn --dev --exact
 ```
 
 ## 参考

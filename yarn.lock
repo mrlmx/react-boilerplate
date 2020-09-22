@@ -3141,8 +3141,8 @@ cz-conventional-changelog@3.2.0:
 
 cz-conventional-changelog@3.3.0:
   version "3.3.0"
-  resolved "https://registry.npm.taobao.org/cz-conventional-changelog/download/cz-conventional-changelog-3.3.0.tgz?cache=0&sync_timestamp=1598467511962&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcz-conventional-changelog%2Fdownload%2Fcz-conventional-changelog-3.3.0.tgz#9246947c90404149b3fe2cf7ee91acad3b7d22d2"
-  integrity sha1-kkaUfJBAQUmz/iz37pGsrTt9ItI=
+  resolved "https://registry.yarnpkg.com/cz-conventional-changelog/-/cz-conventional-changelog-3.3.0.tgz#9246947c90404149b3fe2cf7ee91acad3b7d22d2"
+  integrity sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==
   dependencies:
     chalk "^2.4.1"
     commitizen "^4.0.3"
