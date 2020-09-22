@@ -333,6 +333,10 @@ plugins
 
 ### commitlint + changelog
 
+#### commitizen
+
+问答式交互，生成 git 提交信息，目前使用的是 angular 的提交规范。
+
 安装依赖：
 
 ```
@@ -344,6 +348,29 @@ yarn add commitizen -D
 ```
 yarn commitizen init cz-conventional-changelog --yarn --dev --exact
 ```
+
+#### commitlint
+
+用于在提交时，校验 git 的提交信息，是否符合规范。
+
+```
+yarn add conventional-changelog-cli -D
+```
+
+在 package.json 中的 `husky` 字段新增一个属性：
+
+```javascript
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS"
+    }
+  },
+}
+```
+
+`-E HUSKY_GIT_PARAMS` 的意思是使用 commitlint 校验提交的 message。
 
 ## 参考
 
