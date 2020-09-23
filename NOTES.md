@@ -372,6 +372,48 @@ yarn add conventional-changelog-cli -D
 
 `-E HUSKY_GIT_PARAMS` 的意思是使用 commitlint 校验提交的 message。
 
+#### cz-emoji
+
+在提交时，加上 emoji 也是一种不错的视觉体验。
+
+安装：
+
+```
+yarn add cz-emoji -D
+```
+
+在 package.json 中进行如下配置：
+
+```javascript
+"config": {
+  "commitizen": {
+    "path": "cz-emoji"
+  }
+}
+```
+
+配置 lint 规则：
+
+```
+yarn add commitlint-config-gitmoji -D
+```
+
+新建或修改 .commitlintrc.js 文件：
+
+```javascript
+module.exports = {
+    extends: ["gitmoji"],
+    parserPreset: {
+        parserOpts: {
+            headerPattern: /^(:\w*:)(?:\s)(?:\((.*?)\))?\s((?:.*(?=\())|.*)(?:\(#(\d*)\))?/,
+            headerCorrespondence: ["type", "scope", "subject", "ticket"],
+        },
+    },
+};
+```
+
+关于 emoji lint 的具体规则，可以到官方 GitHub 仓库查看：[commitlint-config-gitmoji](https://github.com/arvinxx/commitlint-config-gitmoji)
+
 ## 参考
 
 这里列出在项目搭建中对我有启发的文章链接。
