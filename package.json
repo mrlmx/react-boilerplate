@@ -83,11 +83,13 @@
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "clean-webpack-plugin": "^3.0.0",
         "commitizen": "^4.2.1",
+        "commitlint-config-gitmoji": "^1.0.1",
         "conventional-changelog-cli": "^2.1.0",
         "copy-webpack-plugin": "^6.1.0",
         "cross-env": "^7.0.2",
         "css-loader": "^4.2.2",
         "cz-conventional-changelog": "3.3.0",
+        "cz-emoji": "^1.2.2",
         "eslint": "^7.9.0",
         "eslint-config-airbnb": "^18.2.0",
         "eslint-config-airbnb-typescript": "^10.0.0",
@@ -133,7 +135,7 @@
     },
     "config": {
         "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
+            "path": "./node_modules/cz-emoji"
         }
     }
 }
