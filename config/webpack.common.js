@@ -52,7 +52,7 @@ module.exports = {
         path: BUILD_PATH,
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+        extensions: [".tsx", ".ts", ".json", ".jsx", ".js"],
         alias: {
             "@": SRC_PATH,
             assets: resolveApp("src/assets"),
