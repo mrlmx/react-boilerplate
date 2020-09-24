@@ -305,7 +305,19 @@ npm run biuld
 -   尽量使用 `include` 指定文件范围
     -   路径最好是绝对路径
     -   `exclude` 的优先级高于 `include`
+-   noParse
+    -   在 webpack 的 module 字段中配置
+    -   告诉 WebPack 只引入相关模块，但是不进行转化和解析
+    -   相关库：jquery 、lodash
+-   externals
+    -   在 webpack 中进行配置
+    -   可以将常用的 依赖包 单独通过 CDN 引入
+    -   在开发时可以正常使用 `import` 导入
+    -   需要考虑一下当 CDN 报错时的备选方案
 -   cache-loader（可以缓存 loader 的执行结果）
+-   happypack（可以加快构建速度）
+-   thread-loader（也可以加快构建速度，但是配置稍微简单些，但是也有些限制）
+-   hard-source-webpack-plugin（可以为模块提供中间缓存，加快二次打包速度）
 
 ### 怎样才能知道你的 WebPack 做的优化，真实有效？
 
