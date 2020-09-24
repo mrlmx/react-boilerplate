@@ -5,6 +5,7 @@ const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackBar = require("webpackbar");
 const {
+    SRC_PATH,
     ENTRY_PATH,
     BUILD_PATH,
     isPro,
@@ -53,7 +54,7 @@ module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
         alias: {
-            "@": resolveApp("src"),
+            "@": SRC_PATH,
             assets: resolveApp("src/assets"),
         },
     },
@@ -63,7 +64,7 @@ module.exports = {
                 test: /\.(tsx|ts|jsx|js)$/,
                 loader: "babel-loader",
                 options: { cacheDirectory: true },
-                exclude: /node_modules/,
+                include: [SRC_PATH],
             },
             {
                 test: /\.css$/,

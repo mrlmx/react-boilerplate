@@ -300,6 +300,18 @@ npm run biuld
 -   配置 Babel 处理 tsx 文件
 -   配置 ESLint 校验 tsx 文件
 
+### WebPack 优化技巧
+
+-   尽量使用 `include` 指定文件范围
+    -   路径最好是绝对路径
+    -   `exclude` 的优先级高于 `include`
+-   cache-loader（可以缓存 loader 的执行结果）
+
+### 怎样才能知道你的 WebPack 做的优化，真实有效？
+
+-   speed-measure-webpack-plugin（可以测量各个插件和 loader 所花费的时间，优化后，可以用它做对比）
+-
+
 ### 配置 browserslist
 
 通过 browserslist 设置项目支持的浏览器版本
