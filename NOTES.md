@@ -318,6 +318,9 @@ npm run biuld
 -   happypack（可以加快构建速度）
 -   thread-loader（也可以加快构建速度，但是配置稍微简单些，但是也有些限制）
 -   hard-source-webpack-plugin（可以为模块提供中间缓存，加快二次打包速度）
+-   webpack.DllPlugin
+    -   用于提取第三方库，可以避免多次构建，还是用于提升构建速度
+    -   关于 dll 功能，可以查看这篇文章：[webpack 使用-详解 DllPlugin](https://segmentfault.com/a/1190000016567986)
 
 ### 怎样才能知道你的 WebPack 做的优化，真实有效？
 
