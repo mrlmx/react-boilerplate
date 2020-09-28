@@ -17,11 +17,16 @@ module.exports = merge(common, {
         hot: true,
         hotOnly: true,
         historyApiFallback: true,
+        headers: {
+            // 不加的话，代理 github 的 api 会经常报错
+            "User-Agent":
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",
+        },
         proxy: {
             "/api": {
                 logLevel: "debug",
                 changeOrigin: true,
-                target: "http://api.github.com",
+                target: "https://api.github.com/",
                 pathRewrite: {
                     "^/api": "",
                 },
