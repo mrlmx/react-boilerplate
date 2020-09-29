@@ -286,6 +286,7 @@ npm run biuld
 
 -   安装 TypeScript 依赖
     -   生成 tsconfig.json 文件（[tsconfig 选项的中文介绍](https://www.tslang.cn/docs/handbook/compiler-options.html)）
+        -   生成命令：`npx tsc --init`
     -   这里配置 tsconfig.json 的主要目的是为了让 编辑器 能够正确的提示错误
     -   [tsconfig.json 中 compilerOptions.module 的值都有什么区别？](https://www.staging-typescript.org/tsconfig#module)
     -   [为什么 esnext, es6, es2015 打包出来的代码都一样？](https://github.com/microsoft/TypeScript/issues/24082)
