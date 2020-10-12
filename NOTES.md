@@ -241,6 +241,25 @@ npm run biuld
 
 ### 清理老的打包文件
 
+每次重新打包，就会在 dist 目录中，生成新的文件，就会造成新老文件共存的情况，而且 dist 目录会越来越大。
+
+CleanWebpackPlugin 就是为了解决这个问题，它会在每次打包的时候，先把 dist 目录里的文件删掉，这样每次打包后，就只会保留最新的文件啦。
+
+在 webpack.prod.js 文件中，引入即可：
+
+```
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
+{
+    //  ...
+    plugins: [
+            new CleanWebpackPlugin(),
+    ]
+    //  ...
+}
+
+```
+
 ### devServer
 
 -   本地环境
