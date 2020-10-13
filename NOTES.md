@@ -485,6 +485,10 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
     -   ["私人定制"CLI 工具](https://zhuanlan.zhihu.com/p/84397064)
     -   [前端一键自动部署工具](https://juejin.im/post/6872914108979609614)
 -   [shields](https://shields.io/)：生成小徽章
+
+### 参考项目
+
+-   [vue-vben-admin](https://github.com/anncwb/vue-vben-admin)
 -   [html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
 
 ### 问题列表
