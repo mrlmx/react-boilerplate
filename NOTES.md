@@ -382,7 +382,7 @@ plugins
 
 #### commitizen
 
-问答式交互，生成 git 提交信息，目前使用的是 angular 的提交规范。
+问答式交互，生成 git 提交信息，目前使用的是 [angular 的提交规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)。
 
 安装依赖：
 
