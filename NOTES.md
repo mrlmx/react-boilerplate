@@ -384,6 +384,14 @@ plugins
 
 问答式交互，生成 git 提交信息，目前使用的是 [angular 的提交规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)。
 
+-   feat：新功能（feature）
+-   fix：修补 bug
+-   docs：文档（documentation）
+-   style： 格式（不影响代码运行的变动）
+-   refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）
+-   test：增加测试
+-   chore：构建过程或辅助工具的变动
+
 安装依赖：
 
 ```
@@ -485,6 +493,7 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
     -   ["私人定制"CLI 工具](https://zhuanlan.zhihu.com/p/84397064)
     -   [前端一键自动部署工具](https://juejin.im/post/6872914108979609614)
 -   [shields](https://shields.io/)：生成小徽章
+-   [Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
 ### 参考项目
 
