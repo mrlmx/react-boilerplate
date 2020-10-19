@@ -12,16 +12,14 @@
 
 ### DotFile
 
-- .gitignore
-- .npmrc
+-   .gitignore
+-   .npmrc
 
 ## 开发规范
 
-### EditorConfig
+### ESLint
 
 ### Prettier
-
-### ESLint
 
 ### StyleLint
 
@@ -33,11 +31,11 @@
 
 ### WebPack
 
-- polyfills（https://webpack.docschina.org/guides/shimming/）
-- CDN
-- SoureMap
-- HMR
-- Service Worker
+-   polyfills（https://webpack.docschina.org/guides/shimming/）
+-   CDN
+-   SoureMap
+-   HMR
+-   Service Worker
 
 ## 高级进阶
 
