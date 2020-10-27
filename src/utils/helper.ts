@@ -9,6 +9,9 @@ const copyToClipboard = (value: string) => {
     document.body.removeChild(el); // 删除DOM
 };
 
+/**
+ * 滚动到顶部
+ */
 const scrollToTop = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {
