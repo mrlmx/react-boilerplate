@@ -1,3 +1,7 @@
+/**
+ * 复制到剪贴板
+ * @param value
+ */
 const copyToClipboard = (value: string) => {
     const el = document.createElement("input");
     el.style.position = "absolute";
