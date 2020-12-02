@@ -13,6 +13,7 @@ const isDev = NODE_ENV === "development";
 const isPro = NODE_ENV === "production";
 const isAnalyzer = !!ANALYZER;
 
+// 当 SERVER_HOST 设置为 "0.0.0.0"，可支持通过 IP 访问。
 const SERVER_HOST = "127.0.0.1";
 const SERVER_PORT = 3000;
 
