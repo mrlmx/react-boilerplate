@@ -495,6 +495,7 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 -   [shields](https://shields.io/)：生成小徽章
 -   [Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 -   [esModuleInterop 到底做了什么？](https://zhuanlan.zhihu.com/p/148081795)
+-   [快速搭建基于 HTTPS 的本地开发环境](https://juejin.cn/post/6908220876357894158)
 
 ### 参考项目
 
