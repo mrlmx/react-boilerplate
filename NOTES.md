@@ -496,6 +496,7 @@ P.S.：有些文章发布日期可能很老，需要自行提取有效信息。
 -   [Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 -   [esModuleInterop 到底做了什么？](https://zhuanlan.zhihu.com/p/148081795)
 -   [快速搭建基于 HTTPS 的本地开发环境](https://juejin.cn/post/6908220876357894158)
+-   [vue 组件发布 npm 最佳实践](https://juejin.cn/post/6844903620916281358)
 
 ### 参考项目
 
